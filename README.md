@@ -84,9 +84,9 @@ For different use cases, we provide four distinct methods to use our program:
 
 3. Set your OpenAI API Key:
 
-  ```bash
-  export OPENAI_API_KEY="<Your OpenAI API Key>"
-  ```
+   ```bash
+   export OPENAI_API_KEY="<Your OpenAI API Key>"
+   ```
 
 4. Modify the prompt in the _prompt.txt file as you want.
 
