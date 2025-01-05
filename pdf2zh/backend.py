@@ -6,7 +6,7 @@ from pdf2zh import translate_stream
 import tqdm
 import json
 import io
-from pdf2zh.doclayout import ModelInstance
+from doclayout import ModelInstance
 
 flask_app = Flask("pdf2zh")
 flask_app.config.from_mapping(

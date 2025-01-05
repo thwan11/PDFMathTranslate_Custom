@@ -12,8 +12,9 @@ from string import Template
 from typing import List, Optional
 
 from pdf2zh import __version__, log
-from pdf2zh.high_level import translate
-from pdf2zh.doclayout import OnnxModel, ModelInstance
+from high_level import translate
+from doclayout import OnnxModel
+from doclayout import ModelInstance
 import os
 
 
@@ -220,7 +221,8 @@ def main(args: Optional[List[str]] = None) -> int:
                 parsed_args.share, parsed_args.authorized, int(parsed_args.serverport)
             )
         else:
-            setup_gui(parsed_args.share, parsed_args.authorized)
+            setup_gui(parsed_args.share)
+            # setup_gui(parsed_args.share, parsed_args.authorized)
         return 0
 
     if parsed_args.flask:

@@ -20,9 +20,9 @@ from pdfminer.pdfpage import PDFPage
 from pdfminer.pdfparser import PDFParser
 from pymupdf import Document, Font
 
-from pdf2zh.converter import TranslateConverter
-from pdf2zh.doclayout import OnnxModel
-from pdf2zh.pdfinterp import PDFPageInterpreterEx
+from converter import TranslateConverter
+from doclayout import OnnxModel
+from pdfinterp import PDFPageInterpreterEx
 
 resfont_map = {
     "zh-cn": "china-ss",
@@ -251,7 +251,7 @@ def translate_stream(
     for id in range(page_count):
         doc_en.move_page(page_count + id, id * 2 + 1)
 
-    return doc_zh.write(deflate=1), doc_en.write(deflate=1)
+    return doc_zh.write(deflate=1)#, doc_en.write(deflate=1)
 
 
 def convert_to_pdfa(input_path, output_path):
@@ -371,18 +371,18 @@ def translate(
 
         if file.startswith(tempfile.gettempdir()):
             os.unlink(file)
-        s_mono, s_dual = translate_stream(
+        s_mono = translate_stream(
             s_raw,
             **locals(),
         )
-        file_mono = Path(output) / f"{filename}-mono.pdf"
-        file_dual = Path(output) / f"{filename}-dual.pdf"
+        file_mono = Path(output) / f"{filename}-kor.pdf"
+        # file_dual = Path(output) / f"{filename}-dual.pdf"
         doc_mono = open(file_mono, "wb")
-        doc_dual = open(file_dual, "wb")
+        # doc_dual = open(file_dual, "wb")
         doc_mono.write(s_mono)
-        doc_dual.write(s_dual)
+        # doc_dual.write(s_dual)
         doc_mono.close()
-        doc_dual.close()
-        result_files.append((str(file_mono), str(file_dual)))
+        # doc_dual.close()
+    #     result_files.append((str(file_mono), str(file_dual)))
 
-    return result_files
+    # return result_files

@@ -1,0 +1,10 @@
+[
+    {
+        "role": "system",
+        "content": "You are a professional, authentic machine translation engine."
+    },
+    {
+        "role": "user",
+        "content": "Translate the following markdown source text to ${lang_out}. Ensure that common technical terms in deep learning and mathematics, such as 'diffusion', 'transformer', 'net', 'propagation', 'residual', 'backpropagation', 'gradient', 'activation', 'dropout', 'attention', 'self-attention', 'cross-attention', 'multi-head attention', 'embedding', 'convolution', 'generator', 'discriminator', 'autoencoder', 'regularization', 'momentum', 'overfitting', 'underfitting', 'feature', 'batch normalization', 'feedforward', 'tokenization', 'encoder', 'decoder', 'fine-tuning', 'prompt', 'data augmentation', 'knowledge distillation', 'layer normalization', 'weight decay', 'positional encoding', 'latent space', 'gradient checkpointing' remain in English. Keep the formula notation {{v*}} unchanged. Output the translation directly without any additional text.\nSource Text: ${text}\nTranslated Text:"
+    }
+]

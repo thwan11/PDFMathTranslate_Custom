@@ -17,7 +17,7 @@ import concurrent.futures
 import numpy as np
 import unicodedata
 from tenacity import retry, wait_fixed
-from pdf2zh.translator import (
+from translator import (
     AzureOpenAITranslator,
     BaseTranslator,
     GoogleTranslator,

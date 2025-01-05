@@ -12,9 +12,9 @@ import tqdm
 from gradio_pdf import PDF
 
 from pdf2zh import __version__
-from pdf2zh.high_level import translate
-from pdf2zh.doclayout import ModelInstance
-from pdf2zh.translator import (
+from high_level import translate
+from doclayout import ModelInstance
+from translator import (
     AnythingLLMTranslator,
     AzureOpenAITranslator,
     AzureTranslator,
