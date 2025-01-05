@@ -90,15 +90,24 @@ For different use cases, we provide four distinct methods to use our program:
    cd PDFMathTranslate_Custom
    ```
 
-4. Set your OpenAI API Key:
+4. Set your API Key:
 
    ```bash
    export OPENAI_API_KEY="<Your OpenAI API Key>"
+   export DEEPSEEK_API_KEY="<Your DeekSeek API Key>"
    ```
 
-5. Modify the prompt in the _prompt.txt file as you want.
+5. Modify the prompt in the **_prompt.txt** file as you want.
 
-6. Execute translation, files generated in [current working directory](https://chatgpt.com/share/6745ed36-9acc-800e-8a90-59204bd13444):
+6. Choose the translation service you want to use (Google, DeepL, OpenAI, DeepSeek) in the **pdf2ko.sh** file:
+   ```bash
+   deepseek (default)
+   openai:gpt-4o
+   openai:gpt-4o-mini
+   ...
+   ```
+   
+7. Execute translation, files generated in [current working directory](https://chatgpt.com/share/6745ed36-9acc-800e-8a90-59204bd13444):
 
    ```bash
    sh pdf2ko.sh document.pdf
