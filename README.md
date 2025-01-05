@@ -76,21 +76,29 @@ For different use cases, we provide four distinct methods to use our program:
   <summary>1. Commandline</summary>
 
 1. Python installed (3.8 <= version <= 3.12)
-2. Install our package:
+2. Install packages:
 
    ```bash
    pip install pdf2zh
+   pip install peewee
    ```
 
-3. Set your OpenAI API Key:
+3. Clone this repository and move to there:
+
+   ```bash
+   git clone https://github.com/thwan11/PDFMathTranslate_Custom.git
+   cd PDFMathTranslate_Custom
+   ```
+
+4. Set your OpenAI API Key:
 
    ```bash
    export OPENAI_API_KEY="<Your OpenAI API Key>"
    ```
 
-4. Modify the prompt in the _prompt.txt file as you want.
+5. Modify the prompt in the _prompt.txt file as you want.
 
-5. Execute translation, files generated in [current working directory](https://chatgpt.com/share/6745ed36-9acc-800e-8a90-59204bd13444):
+6. Execute translation, files generated in [current working directory](https://chatgpt.com/share/6745ed36-9acc-800e-8a90-59204bd13444):
 
    ```bash
    sh pdf2ko.sh document.pdf
